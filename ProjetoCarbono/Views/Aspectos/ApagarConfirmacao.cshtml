@@ -1,10 +1,10 @@
-﻿@model HomeModel
+﻿@model AspectosModel
 @{
 
     ViewData["Title"] = "Confirmação de apagar o Veículo";
 }
 <div class="text-center">
-    <h2>Realmente deseja apagar o Veículo?</h2>
+    <h2>Realmente deseja apagar o veículo @Model.Transporte ?</h2>
     <br />
 
     <a class="btn btn-primary" role="button" asp-controller="Aspectos" asp-action="Index">Cancelar Exclusão</a>

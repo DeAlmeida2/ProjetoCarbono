@@ -1,4 +1,4 @@
-﻿@model HomeModel
+﻿@model AspectosModel
 @{
 
     ViewData["Title"] = "Editar os Aspectos Ambientais";
@@ -11,26 +11,28 @@
 
  </div>
 
-  <form>
+  <form asp-controller="Aspectos" asp-action="Alterar" method="post">
+      ///passar o Id oculto 
+<input type="hidden" asp-for="Id" />
 
   <div class="form-group">
     <label for="Transporte">Transporte</label>
-    <input type="text" class="form-control" placeholder="Digite o Veículo que você mais utiliza">
+    <input type="text" asp-for="Transporte" class="form-control" placeholder="Digite o Veículo que você mais utiliza">
   </div>
 
   <div class="form-group">
     <label for="ConsumoVeiculo">Consumo por Km</label>
-    <input type="text" class="form-control" placeholder="">
+    <input type="text" asp-for="ConsumoVeiculo" class="form-control" placeholder="">
   </div>
 
     <div class="form-group">
     <label for="Passageiros">Passageiros</label>
-    <input type="text" class="form-control" placeholder="">
+    <input type="text" asp-for="Passageiros" class="form-control" placeholder="">
   </div>
 
     <div class="form-group">
     <label for="Emissao">Emissao de CO²</label>
-    <input type="text" class="form-control" placeholder="Emissão de CO² do seu veículo por Km">
+    <input type="text" asp-for="Emissão" class="form-control" placeholder="Emissão de CO² do seu veículo por Km">
   </div>
 
   <button type="submit" class="btn btn-success">Alterar</button>

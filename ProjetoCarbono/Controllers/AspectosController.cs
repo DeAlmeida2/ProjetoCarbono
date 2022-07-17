@@ -21,19 +21,28 @@ namespace ProjetoCarbono.Controllers
             return View();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int Id)
         {
-            return View();
+            AspectosModel aspectos = _aspectosRepositorio.ListarPorId(Id);
+            return View(aspectos);
         }
-        public IActionResult ApagarConfirmacao()
+        public IActionResult ApagarConfirmacao(int Id)
         {
-            return View();
+            AspectosModel aspectos = _aspectosRepositorio.ListarPorId(Id);
+            return View(aspectos);
         }
 
         [HttpPost]
         public IActionResult Criar(AspectosModel aspectos)
         {
             _aspectosRepositorio.Adicionar(aspectos);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Alterar(AspectosModel aspectos)
+        {
+            _aspectosRepositorio.Atualizar(aspectos);
             return RedirectToAction("Index");
         }
 
