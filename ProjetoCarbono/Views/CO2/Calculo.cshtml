@@ -1,0 +1,96 @@
+﻿@model ProjetoCarbono.Models.CO2Model
+@{
+
+    ViewData["Title"] = "Calculo da Emissão de Carbono";
+}
+
+<form asp-action="Calculo"> 
+    <div class="col-2">
+                <label asp-for="Id" class="control-label pt-2" style="font-size=20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <select asp-for="Id" asp-items="ViewBag.Aspectos" class="form-control"></select>
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+
+
+            <div class="col-2">
+                <label asp-for="Km" class="control-label pt-2" style="font-size=20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="Km" class="form-control" />
+                <span asp-validation-for="Km" class="text-danger"></span>
+            </div>
+
+            <div class="col-5">
+                <input type="submit" value="Cadastrar" class="btn btn-outline-success" />
+            </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-success" role="button" asp-controller="Aspectos" asp-action="Calcular">Adicionar novo tipo de Veículo</a>
+    </div>
+    <br />
+
+<h1 class="display-4">Listagem de Aspectos Ambientais</h1>
+ 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Transporte</th>
+      <th scope="col">Consumo do Veículo</th>
+      <th scope="col">Passageiros</th>
+      <th scope="col">Emissão</th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+            @if(Model != null && Model.Any())
+            {
+                foreach (AspectosModel aspectos in Model)
+                {
+                    <tr>
+      <th scope="row">@aspectos.Id</th>
+      <td>@aspectos.Transporte</td>
+      <td>@aspectos.ConsumoVeiculo</td>
+      <td>@aspectos.Passageiros</td>
+      <td>@aspectos.Emissão</td>
+      <td>
+          <div class="btn-group" role="group">
+  <a role="button" class="btn btn-primary" asp-route-id="@aspectos.Id" asp-controller="Aspectos" asp-action="Editar">Editar</a>
+  <a role="button" class="btn btn-danger" asp-route-id="@aspectos.Id" asp-controller="Aspectos" asp-action="ApagarConfirmacao">Apagar</a>
+</div>
+      </td>
+    </tr> 
+                    
+                }
+            }
+        </tbody>
+</table>
+
+         </div>
+ *@

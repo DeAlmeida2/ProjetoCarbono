@@ -42,5 +42,17 @@ namespace ProjetoCarbono.Repositorio
                 return aspectosDb;
             }
         }
+
+        public bool Apagar(int Id)
+        {
+            AspectosModel aspectosDb = ListarPorId(Id);
+
+            if (aspectosDb == null) throw new System.Exception("Houve um erro para deletar o do Veículo");
+
+            _bancoContext.Aspectos.Remove(aspectosDb);
+            _bancoContext.SaveChanges();
+
+            return true;
+        }
     }
 }

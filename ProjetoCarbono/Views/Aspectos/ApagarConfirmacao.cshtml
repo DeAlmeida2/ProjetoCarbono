@@ -8,7 +8,7 @@
     <br />
 
     <a class="btn btn-primary" role="button" asp-controller="Aspectos" asp-action="Index">Cancelar Exclusão</a>
-<a class="btn btn-danger btn-block" role="button" asp-controller="Aspectos" asp-action="Apagar">Confirmar Exclusão</a>
+<a class="btn btn-danger btn-block" role="button" asp-route-id="@Model.Id" asp-controller="Aspectos" asp-action="Apagar">Confirmar Exclusão</a>
 
 </div>
 

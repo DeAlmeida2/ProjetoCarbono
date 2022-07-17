@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ProjetoCarbono.Models;
 using ProjetoCarbono.Repositorio;
 
@@ -31,6 +32,13 @@ namespace ProjetoCarbono.Controllers
             AspectosModel aspectos = _aspectosRepositorio.ListarPorId(Id);
             return View(aspectos);
         }
+
+        public IActionResult Apagar(int Id)
+        {
+            _aspectosRepositorio.Apagar(Id);
+            return RedirectToAction("Index");
+        }
+
 
         [HttpPost]
         public IActionResult Criar(AspectosModel aspectos)

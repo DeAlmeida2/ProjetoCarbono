@@ -4,7 +4,10 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Seja bem vindo! O seu transporte é o @Model.Transporte</h1>
+    <h1 class="display-4">Seja bem vindo!</h1>
     <p>Para ler mais sobre a Emissão de Carbono no Brasil acesse: <a href="http://energiaeambiente.org.br/na-contramao-do-mundo-brasil-aumentou-emissoes-em-plena-pandemia-20211028">IEMA- Instituto de Energia e Meio Ambiente</a>.</p>
-<span>A quantidade de passageiros que utiliza esse carro é: @Model.Passageiros pessoa</span>
+<br />
+
+<a class="btn btn-outline-success" role="button" asp-controller="CO2" asp-action="Index">Calcular minha emissão de Carbono</a>
+
 </div>

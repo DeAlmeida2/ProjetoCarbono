@@ -8,5 +8,6 @@ namespace ProjetoCarbono.Repositorio
         List<AspectosModel> BuscarTodos();    
         AspectosModel Adicionar(AspectosModel aspectos);
         AspectosModel Atualizar(AspectosModel aspectos);
+        bool Apagar(int Id);
     }
 }
