@@ -33,7 +33,7 @@ namespace ProjetoCarbono.Controllers
                 co2.Compensacao = (co2.Calculo / 365 * 1.4);
                 co2.Credito = (co2.Calculo * 1.54);
 
-                return RedirectToAction(nameof(Calcular(co2)));
+                return RedirectToAction("Calcular",co2);
             }
             return View(Calcular(co2));
 

@@ -14,5 +14,17 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    
+}
+
+fundo {
+    background-image: url(../css/Arvore.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
 }

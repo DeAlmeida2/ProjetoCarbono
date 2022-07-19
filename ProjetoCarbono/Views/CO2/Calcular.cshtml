@@ -1,22 +1,28 @@
-﻿
+﻿@model ProjetoCarbono.Models.CO2Model
 @{
 
     ViewData["Title"] = "Calculo da Emissão de Carbono";
 }
-
-<div class="text-center">
+<fundo>
+        
+<div class="text-center" >
     <br />
     
-        <h1 class="display-4">Calculamos a sua emissão de Carbono por 1 ano!</h1>
+        <h2 class="display-4">Calculamos a sua emissão de Carbono por 1 ano!</h2>
 
-<h3>Você percorre @Model.Km por semana utilizando o transporte @Model.Transporte, ele roda @Model.ConsumoVeiculo por Litro de Combustível.</h3
-    <h3>Sua emissão de CO² na atmosfera durante 1 ano foi de: @Model.Calculo Kg </h3>
+<h4>Você percorre @Model.Km Km por semana utilizando o transporte @Model.Transporte, ele roda @Model.ConsumoVeiculo Km por Litro de Combustível.</h4>
+    <h1>Sua emissão de CO² na atmosfera durante 1 ano foi de: @(Model.Calculo.ToString("0.00")) Kg </h1>
     <br />
-    <h4>Para compensar @Model.Calculo Kg de CO² na atmosfera, você precisa plantar @Model.Compensacao arvores! Ou comprar @Model.Credito de crédito Ambiental.</h4>
+    <h4>Para compensar @Model.Calculo.ToString("0.00") Kg de CO² na atmosfera, você precisa plantar @Math.Ceiling(Model.Compensacao) arvores!
+        <p> 
+        Ou comprar @Model.Credito.ToString("0.00") de crédito Ambiental.</h4>
+    </p>
 
 <br />
-
 </div>
+
+</fundo>
+
 
  
     
